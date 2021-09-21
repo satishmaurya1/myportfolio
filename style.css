@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body{
+    background-color: #fc6f6f;
+}
+
+
+
+/* --------------nav section---- */
+
+
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(223, 82, 82);
+}
+
+
+.logo{
+    max-width: 79px;
+}
+
+.navigation{
+    display: flex;
+    align-items: center;
+    
+}
+
+.navigation li{
+    padding: 15px;
+    list-style: none;
+    color: white;
+}
+
+.hamburger,.hamburger1{
+    
+    display: none;
+}
+
+
+@media screen and (max-width: 450px) {
+    .navigation{
+        display: none;
+     }
+
+     .hamburger{
+         display: block;
+     }
+
+     .hamburger1{
+         max-height: 45px;
+         
+     }
+
+     
+
+}
+
+@media screen and (min-width: 450px) {
+    .navigation{
+        display: flex;
+     }
+
+}
+
+
+/* -----------main section-------------- */
+
+
+.main-image{
+    min-width: 25vh;
+    min-height: 25vh;
+    max-width: 34vw;
+    max-height: 34vh;
+    margin-top: 66px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-radius: 85px;
+}
+
+.main-title{
+    color:white;
+    margin-top: 25px;
+    text-align: center;
+    font-size: x-large;
+    font-weight: 600;
+}
+
+.description{
+    color: beige;
+    text-align: center;
+    margin-top: 25px;
+    font-size: 19px
+}
+
+
+
+/* ----------projects section------------- */
+
+.project-section{
+    
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+    
+}
+
+.img{
+    max-width: 250px;
+}
+
+@media screen and (max-width: 450px) {
+.project-section{
+    margin-top: 2em;
+    display: flex;
+
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+}
+
+.project{
+    margin-top: 2em;
+    border: 2px solid white;
+    background: rgb(247, 88, 60);
+}
+
+.btn{
+    padding: 6px 22px;
+    font-size: 18px;
+    border-radius: 35px;
+    border: none;
+    margin-left: 22px;
+    text-transform: uppercase;
+}
