@@ -85,7 +85,7 @@ body{
     margin-left: auto;
     margin-right: auto;
     display: block;
-    border-radius: 85px;
+
 }
 
 .main-title{
@@ -99,11 +99,20 @@ body{
 .description{
     color: beige;
     text-align: center;
-    margin-top: 25px;
+    margin-top: 12px;
     font-size: 19px
 }
 
+.social-icons{
+    margin: 9px auto;
+    max-width: 220px;
+    
 
+}
+
+.social-icons img{
+    margin: 0px 9px;
+}
 
 /* ----------projects section------------- */
 
@@ -124,6 +133,8 @@ body{
 
 }
 
+
+
 @media screen and (max-width: 450px) {
 .project-section{
     margin-top: 2em;
@@ -136,6 +147,16 @@ body{
 }
 
 }
+
+
+.project-detail{
+    max-width: 300px;
+    word-wrap: break-word;
+    color: white;
+    margin: 5px 0px;
+    
+    
+} 
 
 .project{
     margin-top: 2em;
@@ -156,3 +177,4 @@ body{
     margin-left: 22px;
     text-transform: uppercase;
 }
+
