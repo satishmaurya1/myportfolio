@@ -118,7 +118,7 @@ body{
 }
 
 .img{
-    max-width: 250px;
+    max-width: 350px;
 }
 
 @media screen and (max-width: 450px) {
@@ -138,6 +138,11 @@ body{
     margin-top: 2em;
     border: 2px solid white;
     background: rgb(211, 24, 24);
+}
+
+.link{
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .btn{
