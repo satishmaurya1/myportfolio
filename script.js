@@ -59,7 +59,7 @@ function showSlides(n) {
 }
 
 
-if()
+
 
 setInterval(function(){
   
