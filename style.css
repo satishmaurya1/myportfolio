@@ -123,7 +123,7 @@ body{
 .slider {
   position: relative;
   overflow: hidden;
-  height: 90vh;
+  height: 80vh;
   width: 90vw;
   margin: 0px auto;
 }
@@ -195,6 +195,20 @@ body{
     bottom: -300px;
     left: 0;
     width: 100%;
+
+  }
+
+
+  .buttons button#next {
+    position: absolute;
+    top: 107%;
+    right: 40px;
+  }
+  
+  .buttons button#prev {
+    position: absolute;
+    top: 107%;
+    left: 40px;
   }
 
   .slide.current .content {
