@@ -9,7 +9,7 @@
 }
 
 body{
-    background-color: #fc6f6f;
+    background-color: #333;
 }
 
 
@@ -21,7 +21,7 @@ body{
 .nav{
     display: flex;
     justify-content: space-between;
-    background-color: rgb(223, 82, 82);
+    background-color: black;
 }
 
 
@@ -44,6 +44,7 @@ body{
 .hamburger,.hamburger1{
     
     display: none;
+    
 }
 
 
@@ -119,98 +120,113 @@ body{
 
 
 
-* {box-sizing:border-box}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
+.slider {
   position: relative;
-  margin: auto;
+  overflow: hidden;
+  height: 90vh;
+  width: 90vw;
+  margin: 0px auto;
 }
 
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
+.slide {
   position: absolute;
   top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
 }
 
-/* The dots/bullets/indicators */
-.dot {
+.slide.current {
+  opacity: 1;
+}
+
+.slide .content {
+  position: absolute;
+  bottom: 70px;
+  left: -600px;
+  opacity: 0;
+  width: 600px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  padding: 35px;
+}
+
+.slide .content h1 {
+  margin-bottom: 10px;
+}
+
+.slide.current .content {
+  opacity: 1;
+  transform: translateX(600px);
+  transition: all 0.7s ease-in-out 0.3s;
+}
+
+.buttons button#next {
+  position: absolute;
+  top: 112%;
+  right: 74px;
+}
+
+.buttons button#prev {
+  position: absolute;
+  top: 112%;
+  left: 74px;
+}
+
+.buttons button {
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
   cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
+  padding: 13px 15px;
   border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+  outline: none;
 }
 
-.active, .dot:hover {
-  background-color: #717171;
+.buttons button:hover {
+  background-color: #fff;
+  color: #333;
 }
 
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+@media (max-width: 500px) {
+  .slide .content {
+    bottom: -300px;
+    left: 0;
+    width: 100%;
+  }
+
+  .slide.current .content {
+    transform: translateY(-300px);
+  }
 }
 
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
 
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
 
+/* Backgorund Images */
+ 
+.slide:first-child {
+  background: url('https://source.unsplash.com/RyRpq9SUwAU/1600x900') no-repeat
+    center top/cover;
+}
+.slide:nth-child(2) {
+  background: url('https://source.unsplash.com/BeOW_PJjA0w/1600x900') no-repeat
+    center top/cover;
+}
+.slide:nth-child(3) {
+  background: url('https://source.unsplash.com/TMOeGZw9NY4/1600x900') no-repeat
+    center top/cover;
+}
+.slide:nth-child(4) {
+  background: url('https://source.unsplash.com/yXpA_eCbtzI/1600x900') no-repeat
+    center top/cover;
+}
+.slide:nth-child(5) {
+  background: url('https://source.unsplash.com/ULmaQh9Gvbg/1600x900') no-repeat
+    center top/cover;
+} 
+.slide:nth-child(6)  {
+  background: url('https://source.unsplash.com/ggZuL3BTSJU/1600x900') no-repeat
+    center center/cover;
+}
